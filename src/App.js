@@ -6,6 +6,15 @@ const messages = [
 
 export default function App() {
   const step = 3;
+  function handleprevious() {
+    if (step > 1) step -= 1;
+    updateUIValues();
+  }
+  function handlenext() {
+    if (step < 3) step += 1;
+    updateUIValues();
+  }
+
   return (
     <div className="steps">
       <div className="numbers">
@@ -19,10 +28,16 @@ export default function App() {
         step {step}:{messages[step - 1]}
       </p>
       <div className="buttons">
-        <button style={{ backgroundColor: "#7950f2", color: "#ffff" }}>
+        <button
+          style={{ backgroundColor: "#7950f2", color: "#ffff" }}
+          onClick={() => handleprevious()}
+        >
           Previous
         </button>
-        <button style={{ backgroundColor: "#7950f2", color: "#ffff" }}>
+        <button
+          style={{ backgroundColor: "#7950f2", color: "#ffff" }}
+          onClick={() => handlenext()}
+        >
           Next
         </button>
       </div>
