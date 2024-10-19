@@ -1,5 +1,3 @@
-
-
 * {
   box-sizing: border-box;
 }
@@ -7,6 +5,7 @@
 body {
   font-family: sans-serif;
   color: #333;
+  background-color: slategray;
 }
 
 .steps {
@@ -89,5 +88,5 @@ h3 {
 }
 
 .close:hover {
-  color: #7950f2;
+  color: #ea0000;
 }
